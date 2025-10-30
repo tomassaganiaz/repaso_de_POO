@@ -191,3 +191,99 @@ class EstrategiaB implements Estrategia {
     </tr>
   </tbody>
 </table>
+
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: Arial, sans-serif; width: 100%;">
+  <thead style="background-color: #f2f2f2;">
+    <tr>
+      <th colspan="2">🏗️ Patrón de Diseño: Builder</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 25%;"><strong>¿Qué es?</strong></td>
+      <td>Permite construir objetos complejos paso a paso, separando la lógica de construcción de la representación final.</td>
+    </tr>
+    <tr>
+      <td><strong>¿Cuándo usarlo?</strong></td>
+      <td>
+        <ul>
+          <li>Cuando un objeto tiene muchos atributos opcionales.</li>
+          <li>Cuando el constructor tradicional se vuelve confuso o difícil de mantener.</li>
+          <li>Cuando se necesita crear variantes del mismo objeto.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Componentes clave</strong></td>
+      <td>
+        <ul>
+          <li><strong>Producto:</strong> el objeto que se quiere construir.</li>
+          <li><strong>Builder:</strong> define los pasos de construcción.</li>
+          <li><strong>ConcreteBuilder:</strong> implementa los pasos y mantiene el estado.</li>
+          <li><strong>Director (opcional):</strong> orquesta el proceso de construcción.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Ventajas</strong></td>
+      <td>
+        <ul>
+          <li>Evita constructores con muchos parámetros.</li>
+          <li>Mejora la legibilidad y mantenibilidad del código.</li>
+          <li>Facilita la creación de objetos con configuraciones flexibles.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Ejemplo (Java-like)</strong></td>
+      <td>
+        <pre style="background-color: #f9f9f9; padding: 10px; border: 1px solid #ccc;">
+public class Pizza {
+    private String masa;
+    private String salsa;
+    private String relleno;
+
+    private Pizza(Builder builder) {
+        this.masa = builder.masa;
+        this.salsa = builder.salsa;
+        this.relleno = builder.relleno;
+    }
+
+    public static class Builder {
+        private String masa;
+        private String salsa;
+        private String relleno;
+
+        public Builder setMasa(String masa) {
+            this.masa = masa;
+            return this;
+        }
+
+        public Builder setSalsa(String salsa) {
+            this.salsa = salsa;
+            return this;
+        }
+
+        public Builder setRelleno(String relleno) {
+            this.relleno = relleno;
+            return this;
+        }
+
+        public Pizza build() {
+            return new Pizza(this);
+        }
+    }
+}
+        </pre>
+        <p><strong>Uso:</strong></p>
+        <pre style="background-color: #f9f9f9; padding: 10px; border: 1px solid #ccc;">
+Pizza pizza = new Pizza.Builder()
+    .setMasa("fina")
+    .setSalsa("tomate")
+    .setRelleno("queso")
+    .build();
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
