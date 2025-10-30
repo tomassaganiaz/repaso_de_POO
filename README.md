@@ -317,3 +317,57 @@ Pizza pizza = new Pizza.Builder()
     </tr>
   </tbody>
 </table>
+
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: Arial, sans-serif; width: 100%;">
+  <thead style="background-color: #f2f2f2;">
+    <tr>
+      <th colspan="2">🧱 Arquitectura MVC + DAO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 25%;"><strong>🔄 MVC (Modelo-Vista-Controlador)</strong></td>
+      <td>Es un patrón de arquitectura que divide una aplicación en tres componentes principales para separar responsabilidades y facilitar el mantenimiento.</td>
+    </tr>
+    <tr>
+      <td><strong>📦 Modelo</strong></td>
+      <td>
+        <ul>
+          <li>Gestiona los datos, la lógica de negocio y las reglas del sistema.</li>
+          <li>Se comunica con la base de datos (usualmente a través de DAO).</li>
+          <li>No depende de la interfaz gráfica.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>🖼️ Vista</strong></td>
+      <td>
+        <ul>
+          <li>Muestra la información al usuario.</li>
+          <li>Es la interfaz gráfica o presentación.</li>
+          <li>No contiene lógica de negocio.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>🎮 Controlador</strong></td>
+      <td>
+        <ul>
+          <li>Recibe las acciones del usuario (clics, formularios, etc.).</li>
+          <li>Interpreta las acciones y coordina entre Modelo y Vista.</li>
+          <li>Actúa como intermediario lógico.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>🗃️ DAO (Data Access Object)</strong></td>
+      <td>
+        <ul>
+          <li>Componente que actúa como intermediario entre la aplicación y la base de datos.</li>
+          <li>Encapsula las operaciones CRUD (crear, leer, actualizar, eliminar).</li>
+          <li>Permite separar la lógica de acceso a datos del resto del código.</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
