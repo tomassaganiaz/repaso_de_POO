@@ -93,3 +93,14 @@ Pizza pizza = new Pizza.Builder()
     </ul></td></tr>
   </tbody>
 </table>
+
+🧱 Cuadro 3: Arquitectura MVC + DAO
+
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: Arial, sans-serif; width: 100%;">
+  <thead style="background-color: #f2f2f2;">
+    <tr><th colspan="2">🧱 Arquitectura MVC + DAO</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>🔄 MVC (Modelo-Vista-Controlador)</strong></td><td>Divide la aplicación en tres componentes para separar responsabilidades.</td></tr>
+    <tr><td><strong>📦 Modelo</strong></td><td><ul><li>Gestiona datos y lógica de negocio.</li><li>Se comunica con la base de datos (DAO).</li><li>No depende de la interfaz gráfica.</li></ul></td></tr>
+    <tr><td
