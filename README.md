@@ -1,3 +1,63 @@
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: Arial, sans-serif; width: 100%;">
+  <thead style="background-color: #f2f2f2;">
+    <tr>
+      <th colspan="2">📘 Repaso de conceptos clave en Programación Orientada a Objetos (OOP)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Clase</strong></td>
+      <td>Plantilla que define atributos (datos) y métodos (comportamientos).<br><em>Ej:</em> <code>class Persona</code></td>
+    </tr>
+    <tr>
+      <td><strong>Objeto</strong></td>
+      <td>Instancia concreta de una clase.<br><em>Ej:</em> <code>juan = Persona()</code></td>
+    </tr>
+    <tr>
+      <td><strong>Atributo</strong></td>
+      <td>Variable que pertenece a una clase u objeto.<br><em>Ej:</em> <code>self.nombre</code>, <code>self.edad</code></td>
+    </tr>
+    <tr>
+      <td><strong>Función</strong></td>
+      <td>Bloque de código que realiza una tarea específica. Puede estar fuera de una clase.</td>
+    </tr>
+    <tr>
+      <td><strong>Método</strong></td>
+      <td>Función definida dentro de una clase. <br><em>Ej:</em> <code>def saludar(self):</code></td>
+    </tr>
+    <tr>
+      <td><strong>Encapsulamiento</strong></td>
+      <td>Oculta detalles internos usando atributos privados y métodos de acceso.<br><em>Ej:</em> <code>_nombre</code>, <code>__edad</code></td>
+    </tr>
+    <tr>
+      <td><strong>Getter / Setter</strong></td>
+      <td>
+        <ul>
+          <li><strong>Getter:</strong> Devuelve el valor de un atributo.</li>
+          <li><strong>Setter:</strong> Modifica el valor de un atributo.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Decoradores</strong></td>
+      <td>Funciones que modifican el comportamiento de otras funciones o métodos.<br><em>Ej:</em> <code>@staticmethod</code>, <code>@property</code></td>
+    </tr>
+    <tr>
+      <td><strong>Métodos especiales (dunder)</strong></td>
+      <td>Métodos con doble guión bajo que personalizan el comportamiento de objetos.<br><em>Ej:</em> <code>__init__</code>, <code>__str__</code></td>
+    </tr>
+    <tr>
+      <td><strong>Variable</strong></td>
+      <td>Espacio de memoria para guardar datos.<br><em>Ej:</em> <code>edad = 25</code>, <code>nombre = "Tomás"</code></td>
+    </tr>
+    <tr>
+      <td><strong>Variable tipada</strong></td>
+      <td>Variable con tipo de dato definido.<br><em>Ej:</em> <code>int edad = 25;</code>, <code>string nombre = "Tomás";</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
 <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: Arial, sans-serif;">
   <thead style="background-color: #f2f2f2;">
     <tr>
