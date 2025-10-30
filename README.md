@@ -112,3 +112,82 @@ class Persona {
     </tr>
   </tbody>
 </table>
+
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: Arial, sans-serif; width: 100%;">
+  <thead style="background-color: #f2f2f2;">
+    <tr>
+      <th colspan="2">🧩 Segunda Parte: Patrones de Diseño en OOP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 20%;"><strong>🔒 Singleton</strong></td>
+      <td>
+        <p>Limita la creación de múltiples instancias de una clase clave para optimizar recursos.</p>
+        <ul>
+          <li>Útil para: configuración global, logs, conexiones compartidas.</li>
+          <li>Implementación: constructor privado, instancia estática, método <code>getInstance()</code>.</li>
+          <li>Beneficios: control centralizado, evita duplicación, mejora rendimiento.</li>
+        </ul>
+        <pre style="background-color: #f9f9f9; padding: 10px; border: 1px solid #ccc;">
+public class Config {
+    private static Config instancia;
+    private Config() {}
+    public static Config getInstance() {
+        if (instancia == null) {
+            instancia = new Config();
+        }
+        return instancia;
+    }
+}
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>🔗 Chain of Responsibility</strong></td>
+      <td>
+        <p>Encadena objetos con responsabilidad común para procesar solicitudes de forma flexible.</p>
+        <ul>
+          <li>Componentes:
+            <ul>
+              <li><strong>Client:</strong> inicia la solicitud.</li>
+              <li><strong>Handler abstracto:</strong> define interfaz y referencia al siguiente.</li>
+              <li><strong>Handlers concretos:</strong> procesan o delegan.</li>
+            </ul>
+          </li>
+          <li>Ideal para: validaciones, filtros, manejo de errores.</li>
+        </ul>
+        <pre style="background-color: #f9f9f9; padding: 10px; border: 1px solid #ccc;">
+abstract class Handler {
+    protected Handler siguiente;
+    public void setSiguiente(Handler s) { this.siguiente = s; }
+    public abstract void manejar(String tipo);
+}
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>🧠 Strategy</strong></td>
+      <td>
+        <p>Encapsula algoritmos en clases independientes para intercambiarlos sin modificar el cliente.</p>
+        <ul>
+          <li>Evita <code>switch</code> y <code>if-else</code>, mejora escalabilidad.</li>
+          <li>Ideal para lógica variable: ordenamiento, precios, rutas.</li>
+        </ul>
+        <pre style="background-color: #f9f9f9; padding: 10px; border: 1px solid #ccc;">
+interface Estrategia {
+    void ejecutar();
+}
+
+class EstrategiaA implements Estrategia {
+    public void ejecutar() { System.out.println("A"); }
+}
+
+class EstrategiaB implements Estrategia {
+    public void ejecutar() { System.out.println("B"); }
+}
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
