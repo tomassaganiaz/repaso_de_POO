@@ -287,3 +287,33 @@ Pizza pizza = new Pizza.Builder()
     </tr>
   </tbody>
 </table>
+
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: Arial, sans-serif; width: 100%;">
+  <thead style="background-color: #f2f2f2;">
+    <tr>
+      <th colspan="2">🧠 Principios SOLID en Programación Orientada a Objetos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="width: 25%;"><strong>S - SRP</strong><br>(Single Responsibility Principle)</td>
+      <td>Una clase debe tener una única razón para cambiar. Es decir, una sola responsabilidad o propósito claro.</td>
+    </tr>
+    <tr>
+      <td><strong>O - OCP</strong><br>(Open/Closed Principle)</td>
+      <td>El código debe estar abierto para extensión (agregar nuevas funcionalidades), pero cerrado para modificación (no alterar el código existente).</td>
+    </tr>
+    <tr>
+      <td><strong>L - LSP</strong><br>(Liskov Substitution Principle)</td>
+      <td>Las subclases deben poder sustituir a sus clases base sin alterar el comportamiento esperado del programa.</td>
+    </tr>
+    <tr>
+      <td><strong>I - ISP</strong><br>(Interface Segregation Principle)</td>
+      <td>Las interfaces deben ser específicas y no obligar a implementar métodos innecesarios o que no se usan.</td>
+    </tr>
+    <tr>
+      <td><strong>D - DIP</strong><br>(Dependency Inversion Principle)</td>
+      <td>Las clases deben depender de abstracciones (interfaces o clases base), no de implementaciones concretas.</td>
+    </tr>
+  </tbody>
+</table>
